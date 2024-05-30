@@ -802,6 +802,7 @@ class ModuleConnection(AbstractConnection):
         :param    bool    wants_ack:    Also send a request for acknowledge.
         :param    str     pck:          PCK command (without header).
         """
+        wants_ack = False
         if wants_ack:
             return await self.send_command_with_ack(pck)
 
